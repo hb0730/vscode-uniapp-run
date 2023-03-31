@@ -17,6 +17,6 @@ jobs:
           version: 7.25.0
       - run: pnpm i
       - name: Publish
-        run: pnpm exec vsce publish --no-dependencies
+        run: pnpm publish
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
