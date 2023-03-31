@@ -1,0 +1,119 @@
+{
+  "name": "uniapp-run",
+  "displayName": "uniapp run",
+  "description": "基于HBuilderX uniapp cli启动",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.77.0"
+  },
+  "author": {
+    "name": "hb0730",
+    "email": "1278032416@qq.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "uniapp",
+    "HBuilderX",
+    "build"
+  ],
+  "categories": [
+    "Debuggers"
+  ],
+  "activationEvents": [
+    "onDebug"
+  ],
+  "icon": "images/logo.png",
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "uniapp-run",
+      "properties": {
+        "uniapp-run.HBuilderX": {
+          "type": "string",
+          "description": "HBuilderX安装地址"
+        }
+      }
+    },
+    "debuggers": [
+      {
+        "type": "uniapp-run",
+        "label": "Uniapp Run",
+        "languages": [
+          "uniapp"
+        ],
+        "program": "./out/debugger/debugAdapter.js",
+        "runtime": "node",
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "platform"
+            ]
+          },
+          "properties": {
+            "platform": {
+              "type": "string",
+              "description": "启动模式,mp-weixin,mp-alipay,mp-baidu",
+              "enum": [
+                "mp-weixin",
+                "mp-alipay",
+                "mp-baidu"
+              ],
+              "enumDescriptions": [
+                "微信小程序",
+                "支付宝小程序",
+                "百度小程序"
+              ],
+              "default": "mp-weixin"
+            },
+            "compress": {
+              "type": "boolean",
+              "description": "是否运行时压缩",
+              "default": false
+            },
+            "trace": {
+              "type": "boolean",
+              "description": "trace级别的日志",
+              "default": false
+            }
+          }
+        },
+        "initialConfigurations": [
+          {
+            "type": "uniapp-run",
+            "request": "launch",
+            "name": "Uniapp Run",
+            "platform": "mp-weixin"
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm run build",
+    "build":"pnpm compile",
+    "compile": "node build/build.js",
+    "watch": "tsc -watch -p ./",
+    "package": "pnpm vsce package --no-dependencies",
+    "publish": "pnpm vsce publish --no-dependencies",
+    "pretest": "pnpm run compile && pnpm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.77.0",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "@typescript-eslint/parser": "^5.56.0",
+    "@vscode/debugadapter": "^1.59.0",
+    "@vscode/debugadapter-testsupport": "^1.59.0",
+    "@vscode/debugprotocol": "^1.59.0",
+    "@vscode/test-electron": "^2.3.0",
+    "esbuild": "^0.17.14",
+    "eslint": "^8.36.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "typescript": "^4.9.5"
+  }
+}

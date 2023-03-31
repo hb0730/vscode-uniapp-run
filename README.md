@@ -1,2 +1,5 @@
-# vscode-uniapp-run
-基于HBuilderX uniapp cli启动 vscode插件
+# uniapp-run README
+
+基于HBuilderX uniapp cli启动
+
+![video](./images/video.gif)
