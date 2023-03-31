@@ -17,6 +17,6 @@ jobs:
           version: 7.25.0
       - run: pnpm i
       - name: Publish
-        run: pnpm publish
+        run: pnpm publish --no-git-checks
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
