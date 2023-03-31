@@ -6,9 +6,14 @@
   "engines": {
     "vscode": "^1.77.0"
   },
+  "publisher": "hb0730",
   "author": {
     "name": "hb0730",
     "email": "1278032416@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hb0730/vscode-uniapp-run.git"
   },
   "license": "MIT",
   "keywords": [
@@ -90,7 +95,7 @@
   },
   "scripts": {
     "vscode:prepublish": "pnpm run build",
-    "build":"pnpm compile",
+    "build": "pnpm compile",
     "compile": "node build/build.js",
     "watch": "tsc -watch -p ./",
     "package": "pnpm vsce package --no-dependencies",
