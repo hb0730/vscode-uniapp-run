@@ -1,9 +1,9 @@
 # Change Log
 
-All notable changes to the "uniapp-run" extension will be documented in this file.
+## 0.0.3
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+* 新增 打开`mp_weixin`开发者工具
 
 ## [Unreleased]
 
-- Initial release
+* Initial release
