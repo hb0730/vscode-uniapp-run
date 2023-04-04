@@ -23,7 +23,7 @@ import {
   }
   
   export class UniappDebugSession extends LoggingDebugSession {
-    private _runtime?: DebugRuntime;
+    private _runtime: DebugRuntime;
     // private _configurationDone = new Subject();
   
     public constructor() {
@@ -33,7 +33,7 @@ import {
       this.setDebuggerColumnsStartAt1(true);
       this.setDebuggerLinesStartAt1(true);
       this._runtime = new DebugRuntime();
-      this._runtime._project = this.initProject();
+      this._runtime.project = this.initProject();
   
       this._runtime.on("data", (data) => {
         this.sendEvent(new OutputEvent(data));
@@ -123,7 +123,7 @@ import {
         args.trace ? Logger.LogLevel.Verbose : Logger.LogLevel.Stop,
         false
       );
-      if (!this._runtime?._project) {
+      if (!this._runtime.project) {
         vscode.window.showErrorMessage("请配置HBuilderX安装路径");
         this.sendEvent(new TerminatedEvent());
         this.sendResponse(response);
@@ -143,7 +143,8 @@ import {
         return undefined;
       }
       const project = new Project(process.platform === "win32", installLocal);
-      // project.wxDevtools=uniAppRunProperties.get("Wx Devtools");
+      // 微信开发者
+      project.wxDevtools=uniAppRunProperties.get("wxDevtool");
       return project;
     }
   }

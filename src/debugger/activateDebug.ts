@@ -19,7 +19,7 @@ export function activateDebug(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.debug.registerDebugAdapterDescriptorFactory("uniapp-run", factory)
   );
-  context.subscriptions.push(factory);
+  // context.subscriptions.push(factory);
 }
 
 class UniappConfigProvider implements vscode.DebugConfigurationProvider {

@@ -2,7 +2,7 @@
   "name": "uniapp-run",
   "displayName": "uniapp run",
   "description": "基于HBuilderX uniapp cli启动",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -36,6 +36,10 @@
         "uniapp-run.HBuilderX": {
           "type": "string",
           "description": "HBuilderX安装地址"
+        },
+        "uniapp-run.wxDevtool": {
+          "type": "string",
+          "description": "微信开发者工具"
         }
       }
     },
@@ -78,6 +82,11 @@
               "compress": {
                 "type": "boolean",
                 "description": "是否运行时压缩",
+                "default": false
+              },
+              "openDevTool": {
+                "type": "boolean",
+                "description": "是否运行开发者工具",
                 "default": false
               },
               "trace": {
