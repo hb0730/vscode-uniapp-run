@@ -29,7 +29,7 @@
 ```
 
 * `type`: 必须是 `uniapp-run`
-* `request`: 必须是: 'launch'
+* `request`: 必须是: `launch`
 * `name`: 随便填写
 * `platform`: 编译成的平台，与uniapp基本保持一致: `mp-weixin`,`mp-alipay`,`mp-baidu`等
 * `compress`: 是否运行时压缩
