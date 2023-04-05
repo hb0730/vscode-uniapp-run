@@ -8,10 +8,8 @@ import { DebugRuntime } from "../debugger/debugRuntime";
  * 微信开发者工具
  */
 export class WxDevtool extends OpenDevTools {
-  private isWin: boolean;
   constructor(config: Config) {
     super(config);
-    this.isWin = process.platform === "win32";
   }
   exec(projectPath: string, runtime?: DebugRuntime): void {
     const _devToolPath = this.devToolPath();

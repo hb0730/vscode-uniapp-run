@@ -40,6 +40,10 @@
         "uniapp-run.wxDevtool": {
           "type": "string",
           "description": "微信开发者工具"
+        },
+        "uniapp-run.baiduDevtool": {
+          "type":"string",
+          "description": "百度开发者工具"
         }
       }
     },

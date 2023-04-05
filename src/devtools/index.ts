@@ -30,8 +30,10 @@ export class Config {
  */
 export abstract class OpenDevTools {
   private _config: Config;
+  protected isWin:boolean;
   constructor(config: Config) {
     this._config = config;
+    this.isWin=process.platform==='win32';
   }
   abstract exec(projectPath: string,runtime?:DebugRuntime): void;
 

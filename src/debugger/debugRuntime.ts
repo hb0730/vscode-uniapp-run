@@ -5,6 +5,7 @@ import { logger } from "@vscode/debugadapter";
 import * as path from "path";
 import { Config, OpenDevTools, SupportPlatform } from "../devtools";
 import { WxDevtool } from "../devtools/wx";
+import { BaiduDevtool } from "../devtools/baidu";
 
 //cd /Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/ NODE_ENV=development UNI_INPUT_DIR=/Users/hb0730/development/wave/m3/wave-m3-wechat UNI_OUTPUT_DIR=/Users/hb0730/development/wave/m3/wave-m3-wechat/dist UNI_PLATFORM=mp-weixin  /Applications/HBuilderX.app/Contents/HBuilderX/plugins/node/node --max-old-space-size=2048 /Applications/HBuilderX.app/Contents/HBuilderX/plugins/uniapp-cli/bin/uniapp-cli.js
 
@@ -81,19 +82,24 @@ export class DebugRuntime extends EventEmitter {
   }
   private runDevTools(args: ArgsProject) {
     if (!args.openDevTool) {
-      this.emit("data", "skip open devTools \n");
+      this.sendEvent("data", "skip open devTools \n");
       return;
     }
     const _platform: SupportPlatform = args.platform as SupportPlatform;
+    let _config: Config = undefined;
     switch (_platform) {
       case SupportPlatform.weixin:
-        const config: Config = { devToolsPath: this._project.wxDevtools };
-        this._openDevtools = new WxDevtool(config);
+        _config = { devToolsPath: this._project.wxDevtoolPath };
+        this._openDevtools = new WxDevtool(_config);
+        break;
+      case SupportPlatform.baidu:
+        _config = { devToolsPath: this._project.baiduDevtoolPath };
+        this._openDevtools = new BaiduDevtool(_config);
         break;
     }
     if (this._openDevtools) {
-      this.emit("data", `opening ${_platform} dev tools ..... \n`);
-      this._openDevtools.exec(args.uniOutDir,this);
+      this.sendEvent("data", `opening ${_platform} dev tools ..... \n`);
+      this._openDevtools.exec(args.uniOutDir, this);
     }
   }
 }
@@ -109,7 +115,8 @@ export class Project {
   /**
    * 微信开发者工具安装路径
    */
-  private _wxDevtools: string;
+  private _wxDevtoolPath: string;
+  private _baiduDevtoolPath: string;
 
   constructor(isWindows: boolean, installLocalPath: string) {
     this.isWindows = isWindows;
@@ -120,10 +127,22 @@ export class Project {
   /**
    * 微信开发者工具路径
    */
-  set wxDevtools(wxDevtools: string | undefined) {
-    if (wxDevtools) {
-      this._wxDevtools = wxDevtools;
+  set wxDevtoolPath(wxDevtoolPath: string | undefined) {
+    if (wxDevtoolPath) {
+      this._wxDevtoolPath = wxDevtoolPath;
     }
+  }
+  get wxDevtoolPath(): string {
+    return this._wxDevtoolPath;
+  }
+  /**
+   * 百度开发者工具路径
+   */
+  set baiduDevtoolPath(baiduDevtoolPath: string) {
+    this._baiduDevtoolPath = baiduDevtoolPath;
+  }
+  get baiduDevtoolPath(): string {
+    return this._baiduDevtoolPath;
   }
 
   get node(): string {

@@ -144,7 +144,9 @@ import {
       }
       const project = new Project(process.platform === "win32", installLocal);
       // 微信开发者
-      project.wxDevtools=uniAppRunProperties.get("wxDevtool");
+      project.wxDevtoolPath=uniAppRunProperties.get("wxDevtool");
+      // 百度开发者
+      project.baiduDevtoolPath=uniAppRunProperties.get("baiduDevtool");
       return project;
     }
   }
