@@ -38,3 +38,7 @@
 ## 支持打开第三方开发者工具
 
 * 微信开发者工具
+
+# 相关项目
+
+* [uniapp-support](https://plugins.jetbrains.com/plugin/19675-uniapp-support) Jetbrains Idea插件
