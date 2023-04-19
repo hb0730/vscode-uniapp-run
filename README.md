@@ -6,13 +6,13 @@
 
 ![video](./images/video.gif)
 
-# 配置
+## 配置
 
-## 开发者工具&HBuilderX配置
+### 开发者工具&HBuilderX配置
 
 ![devTools](./images/devTools.png)
 
-## launch.json 配置
+### launch.json 配置
 
 如果第一次使用可以使用默认模版方式快速创建`launch.json`
 ![launchJson](./images/launchJson.png)
@@ -39,6 +39,13 @@
 
 * 微信开发者工具
 
-# 相关项目
+## 推荐
 
-* [uniapp-support](https://plugins.jetbrains.com/plugin/19675-uniapp-support) Jetbrains Idea插件
+### Vs Code
+
+* [uni-helper-vscode](https://marketplace.visualstudio.com/items?itemName=uni-helper.uni-helper-vscode) 增强 uni-app 系列产品在 VSCode 内的体验。
+* [create-uniapp-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) 在 VS Code 右键目录文件夹快速创建页面与组建，创建视图页面时将自动添加 pages.json 中！
+
+## JetBrains 插件
+
+* [uniapp-support](https://plugins.jetbrains.com/plugin/19675-uniapp-support) 适用于JetBrains家族的uniapp插件
