@@ -37,7 +37,7 @@ export class WxDevtool extends OpenDevTools {
   private devToolPath(): string {
     let _devToolPath =
       this.devToolsPath + (this.isWin ? `/cli.bat` : `Contents/MacOS/cli`);
-
+      logger.warn(`微信开发者工具安装路径: ${_devToolPath}`);
     if (!existsSync(_devToolPath)) {
       _devToolPath = this.defaultDevToolPath;
     }
