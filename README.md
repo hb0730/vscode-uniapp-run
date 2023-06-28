@@ -45,6 +45,7 @@
 
 * [uni-helper-vscode](https://marketplace.visualstudio.com/items?itemName=uni-helper.uni-helper-vscode) 增强 uni-app 系列产品在 VSCode 内的体验。
 * [create-uniapp-view](https://marketplace.visualstudio.com/items?itemName=mrmaoddxxaa.create-uniapp-view) 在 VS Code 右键目录文件夹快速创建页面与组建，创建视图页面时将自动添加 pages.json 中！
+* [evils.uniapp-vscode](https://marketplace.visualstudio.com/items?itemName=evils.uniapp-vscode) 一个灵活、好用、持续维护的uniapp小程序拓展 **如果使用的hbuildx方式且vue2的强烈推荐**
 
 ## JetBrains 插件
 
