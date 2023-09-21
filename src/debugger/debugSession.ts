@@ -18,6 +18,8 @@ import {
     platform: string;
     /**是否压缩 */
     compress: boolean;
+    /**vue版本 */
+    vueVersion:string;
   
     [key: string]: any;
   }

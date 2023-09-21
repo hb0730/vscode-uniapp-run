@@ -2,7 +2,7 @@
   "name": "uniapp-run",
   "displayName": "uniapp run",
   "description": "基于HBuilderX uniapp cli启动",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -92,6 +92,19 @@
                 "type": "boolean",
                 "description": "是否运行开发者工具",
                 "default": false
+              },
+              "vueVersion":{
+                "type":"string",
+                "description":"vue版本",
+                "enum":[
+                  "v2",
+                  "v3"
+                ],
+                "enumDescriptions":[
+                  "vue2",
+                  "vue3"
+                ],
+                "default":"v2"
               },
               "trace": {
                 "type": "boolean",
