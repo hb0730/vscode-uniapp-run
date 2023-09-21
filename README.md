@@ -34,6 +34,7 @@
 * `platform`: 编译成的平台，与uniapp基本保持一致: `mp-weixin`,`mp-alipay`,`mp-baidu`等
 * `compress`: 是否运行时压缩
 * `openDevTool`: 是否自动打开第三方开发者工具
+* `vueVersion`: vue版本，目前支持`2`和`3`，默认`2`
 
 ## 支持打开第三方开发者工具
 
