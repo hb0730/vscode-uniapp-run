@@ -3,10 +3,6 @@
 module.exports = {
 	root: true,
 	parser: '@typescript-eslint/parser',
-    parserOptions: {
-        "project": "tsconfig.json",
-        "sourceType": "module"
-    },
 	plugins: [
 		"@typescript-eslint",
 	],
@@ -30,11 +26,9 @@ module.exports = {
           'no-dupe-class-members': 'off',
           'no-redeclare': 'off',
           'prefer-rest-params': 'off',
-          '@typescript-eslint/no-inferrable-types': ['error', { ignoreParameters: true }],
+          '@typescript-eslint/no-inferrable-types': ['warn', { ignoreParameters: true }],
           '@typescript-eslint/no-non-null-assertion': 'off',
           '@typescript-eslint/no-unsafe-assignment': 'off',
           "@typescript-eslint/no-explicit-any": "off",
-          "@typescript-eslint/no-inferrable-types":'off'
-
 	}
 };
