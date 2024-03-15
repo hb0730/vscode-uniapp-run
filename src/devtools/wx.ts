@@ -17,7 +17,7 @@ export class WxDevtool extends OpenDevTools {
       logger.warn(`${_devToolPath} 目录不存在，跳过打开开发者工具`);
       return;
     }
-    let cmd = `"${this.devToolPath()}" open  --project "${projectPath}"`;
+    const cmd = `"${this.devToolPath()}" open  --project "${projectPath}"`;
     if (this.isWin) {
       child_process.execSync("chcp 65001");
     }
