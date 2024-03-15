@@ -16,6 +16,8 @@ import {
     extends DebugProtocol.LaunchRequestArguments {
     /**编译类型*/
     platform: string;
+    /**项目路径 */
+    src:string;
     /**是否压缩 */
     compress: boolean;
     /**vue版本 */

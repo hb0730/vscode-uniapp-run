@@ -199,7 +199,7 @@ export class RuntimeArgs{
   private _project:Project;
 
   constructor(args: LaunchRequestArguments, project: Project){
-    this._workPath = args.cwd;
+    this._workPath = args.src||args.cwd;
     this._name = args.projectName;
     this._platform = args.platform;
     this._compress = args.compress === true;

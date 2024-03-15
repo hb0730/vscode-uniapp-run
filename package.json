@@ -88,6 +88,10 @@
                 "description": "是否运行时压缩",
                 "default": false
               },
+              "src":{
+                "type":"string",
+                "description": "项目路径，默认当前环境目录"
+              },
               "openDevTool": {
                 "type": "boolean",
                 "description": "是否运行开发者工具",
