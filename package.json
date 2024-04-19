@@ -25,7 +25,9 @@
     "Debuggers"
   ],
   "activationEvents": [
-    "onDebug"
+    "onDebug",
+    "onCommand:uniapp-run.publish",
+    "onCommand:uniapp-run.run"
   ],
   "icon": "images/logo.png",
   "main": "./out/extension.js",
@@ -127,7 +129,26 @@
           }
         ]
       }
-    ]
+    ],
+    "commands":[
+      {
+        "command": "uniapp-run.publish",
+        "title": "发布uniapp"
+      },
+      {
+        "command": "uniapp-run.run",
+        "title": "运行uniapp"
+      }
+    ],
+    "views": {
+      "explorer":[
+        {
+          "id":"uniappExplorer",
+          "name":"运行uniapp",
+          "icon":"images/logo.png"
+        }
+      ] 
+    }
   },
   "scripts": {
     "vscode:prepublish": "pnpm run build",
