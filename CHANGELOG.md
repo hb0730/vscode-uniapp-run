@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.0.8
+
+* fix `uniapp-run.publish` 命令时无法自动打开第三方开发者工具的bug
+
 ### 0.0.7
 
 * 新增`uniapp-run.publish`和`uniapp-run.run` 命令
