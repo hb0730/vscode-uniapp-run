@@ -1,5 +1,9 @@
 # Change Log
 
+### 0.0.6
+
+* 新增`uniapp-run.publish`和`uniapp-run.run` 命令
+
 ### 0.0.5
 
 * 新增对vue3的支持

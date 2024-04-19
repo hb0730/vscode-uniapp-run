@@ -37,6 +37,13 @@
 * `openDevTool`: 是否自动打开第三方开发者工具
 * `vueVersion`: vue版本，目前支持`2`和`3`，默认`2`
 
+## 命令方式
+
+* `uniapp-run.run`: 运行uniapp项目
+* `uniapp-run.publish`: 发布uniapp项目
+
+![command](./images/commands.png)
+
 ## 支持打开第三方开发者工具
 
 * 微信开发者工具
