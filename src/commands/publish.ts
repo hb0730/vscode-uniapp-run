@@ -51,7 +51,7 @@ export const publish:CommandFactory = (ctx:vscode.ExtensionContext,logger:vscode
             name: currentWorkspace.name,
             platform: defaultConfig.platform,
             compress: defaultConfig.compress,
-            openDevTools: defaultConfig.openDevTools,
+            openDevTools: defaultConfig.openDevTool,
             production: true,
             uniVueVersion: defaultConfig.vueVersion,
         }
