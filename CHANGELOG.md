@@ -1,8 +1,12 @@
 # Change Log
 
-### 0.0.6
+### 0.0.7
 
 * 新增`uniapp-run.publish`和`uniapp-run.run` 命令
+
+### 0.0.6
+
+* 支持自定义项目路径`src`
 
 ### 0.0.5
 
