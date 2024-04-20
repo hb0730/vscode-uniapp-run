@@ -61,6 +61,7 @@ export class UniappRuntimeArgs {
    * @returns `${workPath}`
    */
   get uniInputDir(): string {
+    // windows/mac/linux下路径
     return this.args.workPath;
   }
 
