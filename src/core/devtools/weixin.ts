@@ -13,7 +13,8 @@ export class WxDevTool extends OpenDevTool {
       );
       return;
     }
-    const cmd = `${this.toolPath()} open --project ${projectPath}`;
+    // 解决路径空格问题
+    const cmd = `"${this.toolPath()}" open --project "${projectPath}"`;
     if (this.isWin) {
       execSync("chcp 65001");
     }
