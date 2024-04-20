@@ -1,5 +1,10 @@
 # Change Log
 
+### 0.0.9
+
+* fix: 在不同的操作系统下当前工作路径问题
+* fix: `child_process.exec` 空格路径问题
+
 ### 0.0.8
 
 * fix `uniapp-run.publish` 命令时无法自动打开第三方开发者工具的bug
