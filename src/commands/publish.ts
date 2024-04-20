@@ -63,7 +63,9 @@ export const publish: CommandFactory = (
     }
     const args: runtimeArgs = {
       // 规范化路径 windows/mac/linux 通用
-      workPath: path.normalize(defaultConfig.src || currentWorkspace.uri.fsPath),
+      workPath: path.normalize(
+        defaultConfig.src || currentWorkspace.uri.fsPath
+      ),
       name: currentWorkspace.name,
       platform: defaultConfig.platform,
       compress: defaultConfig.compress,
