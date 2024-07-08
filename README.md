@@ -48,6 +48,19 @@
 
 * 微信开发者工具
 
+## 相关问题
+
+### Error: spawn C:\tool\HBuilderX\plugins\node\node ENOENT
+
+```shell
+2024-07-08 16:02:56.730 [error] Error: spawn C:\tool\HBuilderX\plugins\node\node ENOENT
+    at Process.ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at processTicksAndRejections (node:internal/process/task_queues:82:21)
+```
+
+这是因为第一次下载`HBuilderX`并不会下载`uni-app`相关脚本环境，需要在`HBuilderX`中打开一个`uni-app`项目，然后会自动下载`uni-app`相关脚本环境 [42](https://github.com/hb0730/vscode-uniapp-run/issues/42)
+
 ## 推荐
 
 ### Vs Code
