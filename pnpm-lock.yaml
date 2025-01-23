@@ -28,7 +28,7 @@ devDependencies:
     version: 1.59.0
   '@vscode/debugadapter-testsupport':
     specifier: ^1.59.0
-    version: 1.59.0
+    version: 1.68.0
   '@vscode/debugprotocol':
     specifier: ^1.59.0
     version: 1.59.0
@@ -535,11 +535,11 @@ packages:
       eslint-visitor-keys: 3.4.3
     dev: true
 
-  /@vscode/debugadapter-testsupport@1.59.0:
-    resolution: {integrity: sha512-Q25IHmZCTHispSg/h3kBa8M2EGPFgZGbwt3hlGA53ydWlF0TUEJ12oW9ODMEBO+VAk+GGrHW/C6iCLgyLvcPPw==}
+  /@vscode/debugadapter-testsupport@1.68.0:
+    resolution: {integrity: sha512-UpbaPsCGMKyjIvJFtqFKDD1MVvME50xuOtRBPrqY1WdhAOLjWQN7FcKEoHv3X85twfNL21jW2M54FYwEdEQv4Q==}
     engines: {node: '>=14'}
     dependencies:
-      '@vscode/debugprotocol': 1.59.0
+      '@vscode/debugprotocol': 1.68.0
     dev: true
 
   /@vscode/debugadapter@1.59.0:
@@ -551,6 +551,10 @@ packages:
 
   /@vscode/debugprotocol@1.59.0:
     resolution: {integrity: sha512-Ks8NiZrCvybf9ebGLP8OUZQbEMIJYC8X0Ds54Q/szpT/SYEDjTksPvZlcWGTo7B9t5abjvbd0jkNH3blYaSuVw==}
+    dev: true
+
+  /@vscode/debugprotocol@1.68.0:
+    resolution: {integrity: sha512-2J27dysaXmvnfuhFGhfeuxfHRXunqNPxtBoR3koiTOA9rdxWNDTa1zIFLCFMSHJ9MPTPKFcBeblsyaCJCIlQxg==}
     dev: true
 
   /@vscode/test-electron@2.3.0:
@@ -820,7 +824,7 @@ packages:
       normalize-path: 3.0.0
       readdirp: 3.6.0
     optionalDependencies:
-      fsevents: 2.3.2
+      fsevents: 2.3.3
     dev: true
 
   /chownr@1.1.4:
@@ -1260,8 +1264,8 @@ packages:
     resolution: {integrity: sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==}
     dev: true
 
-  /fsevents@2.3.2:
-    resolution: {integrity: sha512-xiqMQR4xAeHTuB9uWm+fFRcIOgKBMiOBP+eXiyT7jsgVCq1bkVygt00oASowB7EdtpOHaaPgKt812P9ab+DDKA==}
+  /fsevents@2.3.3:
+    resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
     engines: {node: ^8.16.0 || ^10.6.0 || >=11.0.0}
     os: [darwin]
     requiresBuild: true
