@@ -19,7 +19,7 @@ export const run: CommandFactory = () => {
       if (!selectedName) {
         return;
       }
-      currentWorkspace = folders.find((item) => item.name === selectedName)[0];
+      currentWorkspace = folders.find((item) => item.name === selectedName);
     }
     // 获取 launch.json 配置
     const config = vscode.workspace.getConfiguration(
