@@ -1,5 +1,10 @@
 # Change Log
 
+
+### 0.0.10
+
+* fix: 在`command`模式下，多个项目时，`currentWorkspace` 问题
+
 ### 0.0.9
 
 * fix: 在不同的操作系统下当前工作路径问题
