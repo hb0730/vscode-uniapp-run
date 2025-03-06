@@ -1,6 +1,10 @@
 # Change Log
 
 
+### 0.0.11
+
+* feat: 在`输出/output`面板显示自动聚焦`uniapp-run`的输出信息 [#52](https://github.com/hb0730/vscode-uniapp-run/pull/52)
+
 ### 0.0.10
 
 * fix: 在`command`模式下，多个项目时，`currentWorkspace` 问题
