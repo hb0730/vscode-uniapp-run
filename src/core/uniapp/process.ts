@@ -20,6 +20,7 @@ export class UniappDebugProcess extends EventEmitter {
   }
 
   public async start(args: UniappRuntimeArgs) {
+    this.logger.show(true);
     this.logger.info("uniapp-run process start ....");
     this.logger.info(`HBuilderX path: ${this.config.HBuilderPath}`);
     this.logger.info(`WorkPath: ${args.uniInputDir}`);
