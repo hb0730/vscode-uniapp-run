@@ -1,5 +1,9 @@
 # Change Log
 
+## 0.0.12
+ * fix: 在Linux环境下导致`Error: spawn xxx\node\node ENOENT` [#53](https://github.com/hb0730/vscode-uniapp-run/issues/53)
+   - 在`Windows/Linux`环境下，执行路径为`${HBuilderX}/plugins/` 
+   - 在`Mac`环境下，执行路径为`${HBuilderX}/Contents/HBuilderX/plugins/`
 
 ### 0.0.11
 

@@ -43,9 +43,11 @@ export interface runtimeArgs {
   uniVueVersion: string;
 }
 export class UniappRuntimeArgs {
-  private _isWindows: boolean;
+  // private _isWindows: boolean;
+  private _isMacOs:boolean;
   constructor(public args: runtimeArgs, public config: UnappRunConfig) {
-    this._isWindows = process.platform === "win32";
+    // this._isWindows = process.platform === "win32";
+    this._isMacOs = process.platform === "darwin";
   }
 
   /**
@@ -117,7 +119,7 @@ export class UniappRuntimeArgs {
    */
   get cwd(): string {
     let paths: string[] = ["plugins"];
-    if (!this._isWindows) {
+    if (this._isMacOs) {
       paths = ["Contents", "HBuilderX", ...paths];
     }
     if (this.uniVueVersion === "v3") {
@@ -134,7 +136,7 @@ export class UniappRuntimeArgs {
    */
   get nodePath(): string {
     let paths: string[] = ["plugins", "node", "node"];
-    if (!this._isWindows) {
+    if (this._isMacOs) {
       paths = ["Contents", "HBuilderX", ...paths];
     }
     return path.join(this.config.HBuilderPath, ...paths);
@@ -146,7 +148,7 @@ export class UniappRuntimeArgs {
    */
   get nodeJsPath(): string {
     let paths: string[] = ["plugins"];
-    if (!this._isWindows) {
+    if (this._isMacOs) {
       paths = ["Contents", "HBuilderX", ...paths];
     }
     if (this.uniVueVersion === "v3") {
