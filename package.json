@@ -44,7 +44,7 @@
           "description": "微信开发者工具"
         },
         "uniapp-run.baiduDevtool": {
-          "type":"string",
+          "type": "string",
           "description": "百度开发者工具"
         }
       }
@@ -90,8 +90,8 @@
                 "description": "是否运行时压缩",
                 "default": false
               },
-              "src":{
-                "type":"string",
+              "src": {
+                "type": "string",
                 "description": "项目路径，默认当前环境目录"
               },
               "openDevTool": {
@@ -99,18 +99,18 @@
                 "description": "是否运行开发者工具",
                 "default": false
               },
-              "vueVersion":{
-                "type":"string",
-                "description":"vue版本",
-                "enum":[
+              "vueVersion": {
+                "type": "string",
+                "description": "vue版本",
+                "enum": [
                   "v2",
                   "v3"
                 ],
-                "enumDescriptions":[
+                "enumDescriptions": [
                   "vue2",
                   "vue3"
                 ],
-                "default":"v2"
+                "default": "v2"
               },
               "trace": {
                 "type": "boolean",
@@ -130,7 +130,7 @@
         ]
       }
     ],
-    "commands":[
+    "commands": [
       {
         "command": "uniapp-run.publish",
         "title": "发布uniapp"
@@ -141,13 +141,13 @@
       }
     ],
     "views": {
-      "explorer":[
+      "explorer": [
         {
-          "id":"uniappExplorer",
-          "name":"运行uniapp",
-          "icon":"images/logo.png"
+          "id": "uniappExplorer",
+          "name": "运行uniapp",
+          "icon": "images/logo.png"
         }
-      ] 
+      ]
     }
   },
   "scripts": {
@@ -163,20 +163,20 @@
   },
   "devDependencies": {
     "@types/glob": "^8.1.0",
-    "@types/mocha": "^10.0.1",
-    "@types/node": "20.x",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "~20.17.28",
     "@types/vscode": "^1.77.0",
-    "@typescript-eslint/eslint-plugin": "^6.7.0",
-		"@typescript-eslint/parser": "^6.7.0",
-    "@vscode/debugadapter": "^1.59.0",
-    "@vscode/debugadapter-testsupport": "^1.59.0",
-    "@vscode/debugprotocol": "^1.59.0",
-    "@vscode/test-electron": "^2.3.0",
-    "@vscode/vsce": "^2.18.0",
-    "esbuild": "^0.20.0",
-    "eslint": "^8.36.0",
-    "glob": "^10.0.0",
-    "mocha": "^10.2.0",
-    "typescript": "^5.0.0"
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vscode/debugadapter": "^1.68.0",
+    "@vscode/debugadapter-testsupport": "^1.68.0",
+    "@vscode/debugprotocol": "^1.68.0",
+    "@vscode/test-electron": "^2.4.1",
+    "@vscode/vsce": "^2.32.0",
+    "esbuild": "^0.20.2",
+    "eslint": "^8.57.1",
+    "glob": "^10.4.5",
+    "mocha": "^10.8.2",
+    "typescript": "^5.8.2"
   }
 }

@@ -1,5 +1,8 @@
 # Change Log
 
+## [Unreleased]
+ * perf: 优化  引导配置HBuilderX [64939d2](https://github.com/hb0730/vscode-uniapp-run/commit/64939d23287c790c88a6ebc94cb0c31fc0b3dc20)
+
 ## 0.0.12
  * fix: 在Linux环境下导致`Error: spawn xxx\node\node ENOENT` [#53](https://github.com/hb0730/vscode-uniapp-run/issues/53)
    - 在`Windows/Linux`环境下，执行路径为`${HBuilderX}/plugins/` 
@@ -42,7 +45,3 @@
 ## 0.0.3
 
 * 新增 打开`mp_weixin`开发者工具
-
-## [Unreleased]
-
-* Initial release
