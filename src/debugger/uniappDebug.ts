@@ -125,11 +125,29 @@ export class UniappDebugSession extends DebugSession {
     logger.setup(args.trace ? Logger.LogLevel.Verbose : Logger.LogLevel.Stop, false);
     const uniappConfig= getUniappConfig();
     if(!uniappConfig){
-      vscode.window.showErrorMessage('请设置HBuilderX路径');
+      // vscode.window.showErrorMessage('请设置HBuilderX路径');
       this.sendEvent(
         new OutputEvent('请设置HBuilderX路径', 'stderr')
       )
-      this.sendErrorResponse(response, 1, '请设置HBuilderX路径');
+      // 终止debug
+      this.sendErrorResponse(
+        response,
+        {
+          id: 201,
+          format: '请设置HBuilderX路径',
+          showUser: false,
+          sendTelemetry: true,
+        }
+      )
+      //  打开设置
+      vscode.window.
+        showErrorMessage('请设置HBuilderX路径', { modal: true }, { title: '打开设置' })
+        .then((item) => {
+          if (item) {
+            vscode.commands.executeCommand('workbench.action.openSettings', '@ext:hb0730.uniapp-run');
+          }
+        });
+
       return;
     }
     //启动

@@ -58,7 +58,15 @@ export const publish: CommandFactory = (
     }
     const conf: UnappRunConfig = getUniappConfig();
     if (!conf) {
-      vscode.window.showErrorMessage("请配置HBuilderX路径");
+      //  打开设置
+      vscode.window.
+        showErrorMessage('请设置HBuilderX路径', { modal: true }, { title: '打开设置' })
+        .then((item) => {
+          if (item) {
+            vscode.commands.executeCommand('workbench.action.openSettings', '@ext:hb0730.uniapp-run');
+          }
+        });
+      
       return;
     }
     const args: runtimeArgs = {
