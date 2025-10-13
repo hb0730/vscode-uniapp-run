@@ -14,7 +14,7 @@
 
 ### launch.json 配置
 
-如果第一次使用可以使用默认模版方式快速创建`launch.json`
+如果第一次使用可以使用默认模版方式快速创建`.vscode/launch.json`
 ![launchJson](./images/launchJson.png)
 
 `launch.json` 参数
@@ -35,7 +35,8 @@
 * `src`: 项目路径，默认当前项目路径
 * `compress`: 是否运行时压缩
 * `openDevTool`: 是否自动打开第三方开发者工具
-* `vueVersion`: vue版本，目前支持`2`和`3`，默认`2`
+* `vueVersion`: vue版本，目前支持`v2`和`v3`，默认: `v2`
+* `trace`: 是否启动trace级别的日志, 默认: `false`
 
 ## 命令方式
 
