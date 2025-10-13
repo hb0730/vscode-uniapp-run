@@ -5,7 +5,8 @@
 ## 0.0.13
  * perf: 优化  引导配置HBuilderX [64939d2](https://github.com/hb0730/vscode-uniapp-run/commit/64939d23287c790c88a6ebc94cb0c31fc0b3dc20)
  * chore: 依赖升级
- * feat: 支持 (wechat-web-devtools-linux)[https://github.com/msojocs/wechat-web-devtools-linux] Linux环境下的工具打开
+ * feat: 支持 [wechat-web-devtools-linux](https://github.com/msojocs/wechat-web-devtools-linux) Linux环境下的工具打开 [a8d8a2b
+](https://github.com/hb0730/vscode-uniapp-run/commit/a8d8a2b28d8349d4bcb82b6f570b0d535025977a)
 
 ## 0.0.12
  * fix: 在Linux环境下导致`Error: spawn xxx\node\node ENOENT` [#53](https://github.com/hb0730/vscode-uniapp-run/issues/53)
