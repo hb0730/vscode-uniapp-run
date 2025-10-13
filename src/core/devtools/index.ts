@@ -16,9 +16,17 @@ export interface DevToolConfig {
 }
 
 export abstract class OpenDevTool {
-  protected isWin: boolean;
+  protected os: 'mac' | 'win'| 'linux';
   constructor(public conf: DevToolConfig, public log: vscode.LogOutputChannel) {
-    this.isWin = process.platform === "win32";
+    // this.isWin = process.platform === "win32";
+    // process.platform 有以下几种可能： 'aix' | 'darwin' | 'freebsd' | 'linux' | 'openbsd' | 'sunos' | 'win32' | 'cygwin'
+    if (process.platform === "darwin") {
+      this.os = 'mac';
+    } else if (process.platform === "win32") {
+      this.os = 'win';
+    } else {
+      this.os = 'linux';
+    }
   }
   /**
    * 执行打开工具
