@@ -15,7 +15,8 @@ export class WxDevTool extends OpenDevTool {
     }
     // 解决路径空格问题
     const cmd = `"${this.toolPath()}" open --project "${projectPath}"`;
-    if (this.isWin) {
+    if (this.os==='win') {
+      // 解决中文乱码问题
       execSync("chcp 65001");
     }
     this.log.info(`exec ${cmd}`);
@@ -34,9 +35,13 @@ export class WxDevTool extends OpenDevTool {
   }
 
   private toolPath(): string {
-    return path.join(
-      this.conf.path,
-      this.isWin ? `/cli.bat` : `/Contents/MacOS/cli`
-    );
+    // 不同系统下，开发者工具的可执行文件路径不一样,需要判断
+    if(this.os==='win'){
+      return path.join(this.conf.path, `/cli.bat`);
+    }else if(this.os==='mac'){
+      return path.join(this.conf.path, `/Contents/MacOS/cli`);
+    }else{
+      return path.join(this.conf.path, `/bin/wechat-devtools-cli`);
+    }
   }
 }
